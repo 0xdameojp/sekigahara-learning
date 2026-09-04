@@ -1,0 +1,57 @@
+[
+  {
+    "path": "public/images/places/osaka-castle.jpg",
+    "b64": "scripts/image-b64/places__osaka-castle.jpg.b64",
+    "bytes": 598860
+  },
+  {
+    "path": "public/images/places/sekigahara-byobu.jpg",
+    "b64": "scripts/image-b64/places__sekigahara-byobu.jpg.b64",
+    "bytes": 882094
+  },
+  {
+    "path": "public/images/figures/fukushima-masanori.jpg",
+    "b64": "scripts/image-b64/figures__fukushima-masanori.jpg.b64",
+    "bytes": 308888
+  },
+  {
+    "path": "public/images/figures/honda-tadakatsu.jpg",
+    "b64": "scripts/image-b64/figures__honda-tadakatsu.jpg.b64",
+    "bytes": 718231
+  },
+  {
+    "path": "public/images/figures/ishida-mitsunari.jpg",
+    "b64": "scripts/image-b64/figures__ishida-mitsunari.jpg.b64",
+    "bytes": 508978
+  },
+  {
+    "path": "public/images/figures/kobayakawa-hideaki.jpg",
+    "b64": "scripts/image-b64/figures__kobayakawa-hideaki.jpg.b64",
+    "bytes": 425202
+  },
+  {
+    "path": "public/images/figures/mori-terumoto.jpg",
+    "b64": "scripts/image-b64/figures__mori-terumoto.jpg.b64",
+    "bytes": 403766
+  },
+  {
+    "path": "public/images/figures/otani-yoshitsugu.jpg",
+    "b64": "scripts/image-b64/figures__otani-yoshitsugu.jpg.b64",
+    "bytes": 459925
+  },
+  {
+    "path": "public/images/figures/tokugawa-ieyasu.jpg",
+    "b64": "scripts/image-b64/figures__tokugawa-ieyasu.jpg.b64",
+    "bytes": 418258
+  },
+  {
+    "path": "public/images/figures/ukita-hideie.jpg",
+    "b64": "scripts/image-b64/figures__ukita-hideie.jpg.b64",
+    "bytes": 34558
+  },
+  {
+    "path": "public/images/hero/sekigahara-battle.jpg",
+    "b64": "scripts/image-b64/hero__sekigahara-battle.jpg.b64",
+    "bytes": 882094
+  }
+]
