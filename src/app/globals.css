@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0a09;
+  --foreground: #f3ead7;
+  --ink: #14110f;
+  --ink-deep: #0a0807;
+  --paper: #f3ead7;
+  --gold: #c9a227;
+  --crimson: #8b1e1e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-paper: var(--paper);
+  --color-gold: var(--gold);
+  --color-crimson: var(--crimson);
+  --font-sans: var(--font-noto-sans);
+  --font-serif: var(--font-noto-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, rgba(201, 162, 39, 0.08), transparent 45%),
+    radial-gradient(ellipse at bottom right, rgba(139, 30, 30, 0.12), transparent 40%),
+    var(--background);
+  color: var(--foreground);
+  min-height: 100%;
+}
+
+::selection {
+  background: rgba(201, 162, 39, 0.35);
+  color: #fff8e7;
+}
+
+.prose-jp p {
+  line-height: 1.9;
+}
