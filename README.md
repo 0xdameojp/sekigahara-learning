@@ -10,6 +10,7 @@ TVドキュメンタリー／参考番組風の章立てで、あらすじ・年
 - Next.js（App Router）
 - TypeScript
 - Tailwind CSS
+- framer-motion（スクロール演出・ヒーロー演出。`prefers-reduced-motion` 対応）
 
 ## 主なルート
 
@@ -24,25 +25,37 @@ TVドキュメンタリー／参考番組風の章立てで、あらすじ・年
 | /battle-flow | 戦いの流れ |
 | /glossary | 用語集 |
 | /quiz | 確認クイズ（採点付き） |
-| /references | 参考リンク・学習用免責 |
+| /references | 参考リンク・学習用免責・画像出典 |
+
+## 画像
+
+Wikimedia Commons のパブリックドメイン／自由ライセンス肖像・合戦図を `public/images/` に配置します。
+クローン直後に画像が無い場合:
+
+```bash
+npm run fetch-images
+```
+
+`prebuild` でも同じスクリプトが走ります。出典は各ページのキャプションと `/references` に記載。
 
 ## ローカルでの起動
 
 1. git clone https://github.com/0xdameojp/sekigahara-learning.git
 2. cd sekigahara-learning
 3. npm install
-4. npm run dev
+4. npm run fetch-images   # 初回
+5. npm run dev
 
 ブラウザで http://localhost:3000 を開きます。
 
-本番ビルド確認: npm run build のあと npm start
+本番ビルド確認: `npm run build` のあと `npm start`
 
 ## Vercel へのデプロイ
 
 1. Vercel にログインし Add New Project
 2. GitHub リポジトリ 0xdameojp/sekigahara-learning をインポート
 3. Framework Preset は Next.js（自動検出）
-4. Build Command は npm run build／Output はデフォルト
+4. Build Command は npm run build／Output はデフォルト（prebuild で画像取得）
 5. Deploy をクリック
 
 CLI: npm i -g vercel のあと vercel
@@ -50,8 +63,9 @@ CLI: npm i -g vercel のあと vercel
 ## デザイン方針
 
 - 暗いシネマティックな基調色に、金／和紙色のアクセント
-- オリジナルSVG図のみ（著作権のあるTV埋め込みなし）
+- オリジナルSVG図＋Commons肖像／合戦図（著作権のあるTV埋め込みなし）
 - モバイル対応のチャプターナビ
+- スクロールReveal・カードホバー・ヒーローパララックス
 
 ## ライセンス・免責
 
