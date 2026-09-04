@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "decode-images": "node scripts/decode-images.mjs",
-    "prebuild": "node scripts/decode-images.mjs"
+    "fetch-images": "node scripts/fetch-images.mjs",
+    "prebuild": "node scripts/decode-images.mjs || node scripts/fetch-images.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.2.0",
