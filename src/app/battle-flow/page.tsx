@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ChapterHero from "@/components/ChapterHero";
 import ChapterNav from "@/components/ChapterNav";
 import PlaceImage from "@/components/PlaceImage";
@@ -25,6 +26,19 @@ export default function BattleFlowPage() {
         credit="Sekigahara_Kassen_Byōbu-zu_(Gifu_History_Museum).jpg"
         caption="岐阜市歴史博物館蔵の合戦図屏風。北から見た珍しい構図で戦場全体を描く。"
       />
+
+      <div className="mt-6 rounded-xl border border-gold/25 bg-gold/10 p-4 text-sm text-paper/80 md:p-5">
+        <p className="font-medium text-gold">部隊の動きをアニメで見る</p>
+        <p className="mt-1 text-paper/65">
+          早朝の布陣から小早川の寝返り・西軍崩壊まで、各群の移動を時系列で再生できます。
+        </p>
+        <Link
+          href="/battlefield"
+          className="mt-3 inline-flex rounded-lg border border-gold/40 bg-gold/20 px-4 py-2 text-sm font-medium text-gold transition hover:bg-gold/30"
+        >
+          戦場マップのアニメーションへ →
+        </Link>
+      </div>
 
       <StaggerList className="mt-8 grid gap-4">
         {battlePhases.map((phase, index) => (

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ChapterHero from "@/components/ChapterHero";
 import ChapterNav from "@/components/ChapterNav";
 import BattlefieldMap from "@/components/BattlefieldMap";
+import TroopMovementPlayer from "@/components/TroopMovementPlayer";
 import PlaceImage from "@/components/PlaceImage";
 import FadeIn from "@/components/motion/FadeIn";
 
@@ -15,7 +17,7 @@ export default function BattlefieldPage() {
       <ChapterHero
         chapter="第4章"
         title="戦場マップ"
-        subtitle="関ヶ原周辺の学習用簡易SVG図。実寸・正確な測量図ではありません。"
+        subtitle="関ヶ原周辺の学習用簡易SVG図と、時系列別の部隊移動アニメーション。実寸・正確な測量図ではありません。"
       />
 
       <PlaceImage
@@ -27,13 +29,29 @@ export default function BattlefieldPage() {
       />
 
       <FadeIn className="mt-8">
-        <BattlefieldMap />
+        <TroopMovementPlayer />
       </FadeIn>
+
       <ul className="mt-6 space-y-2 rounded-xl border border-gold/15 bg-paper/[0.03] p-5 text-sm text-paper/70">
-        <li>・中央付近に東軍本隊、北方〜中央に西軍中核を概念配置。</li>
-        <li>・南方の松尾山に小早川秀秋。開戦後の寝返りが学習上の重要ポイント。</li>
-        <li>・中山道は東西交通のイメージとして破線的に表現。</li>
+        <li>・再生すると早朝→午前→正午（小早川の寝返り）→午後の4局面で各軍が移動します。</li>
+        <li>・南方の松尾山から大谷方面へ動く金枠が小早川秀秋の寝返り（概念）。</li>
+        <li>・破線枠の毛利方面は「動かなかった」学習ポイントを示す待機表示です。</li>
+        <li>・中山道は東西交通のイメージとして表現。詳細な流れは{" "}
+          <Link href="/battle-flow" className="text-gold underline-offset-2 hover:underline">
+            戦いの流れ
+          </Link>
+          {" "}も参照。</li>
       </ul>
+
+      <details className="mt-8 rounded-xl border border-gold/15 bg-paper/[0.02] p-4 open:pb-5">
+        <summary className="cursor-pointer font-serif text-paper/90">
+          静的マップ（従来版）を表示
+        </summary>
+        <FadeIn className="mt-4">
+          <BattlefieldMap />
+        </FadeIn>
+      </details>
+
       <ChapterNav current="/battlefield" />
     </div>
   );
